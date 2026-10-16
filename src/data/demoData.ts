@@ -118,5 +118,11 @@ export const initialAnswers: Answers = {
   submitted: [],
 }
 
+/** Estimated Annual Premium ranges shown in the rail once quoting finishes (values from the Chubb live frame). */
+export const premiumRanges: { label: string; range: string }[] = [
+  { label: 'General Liability', range: '$739 - $1,204' },
+  { label: 'Worker’s Compensation', range: '$734 - $1,343' },
+]
+
 export const legalEntities = ['LLC', 'Corporation', 'Sole Proprietorship', 'Partnership', 'Non-profit']
 export const idTypes = ['FEIN (Federal Tax Identification Number)', 'SSN (Social Security Number)']

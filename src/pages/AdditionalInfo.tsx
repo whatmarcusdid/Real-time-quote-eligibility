@@ -4,6 +4,7 @@ import { SelectField, TextField } from '../components/Fields'
 import { idTypes } from '../data/demoData'
 import { eligibleCarrierSteps } from '../services/mockService'
 import { useDemo } from '../state/DemoContext'
+import { Img } from '../components/Icon'
 
 export default function AdditionalInfo() {
   const { answers: a, update } = useDemo()
@@ -17,7 +18,7 @@ export default function AdditionalInfo() {
       onNext={() => { if (feinOk && steps.length) navigate(`/apply/carrier/${steps[0]}`) }}>
       <div className="w-[174px]">
         <TextField label="Policy start date" value={a.policyStart} onChange={(v) => update({ policyStart: v })} placeholder="MM/DD/YYYY"
-          helper="Some carriers default policy start dates to the next day." trailing={<span aria-hidden className="text-ink-60">▦</span>} />
+          helper="Some carriers default policy start dates to the next day." trailing={<Img src="figma/calendar.svg" width={24} height={24} />} />
       </div>
       <div className="grid grid-cols-2 gap-[15px]">
         <SelectField inline={false} label="What type of identification is your tax filed under?" value={a.idType} options={idTypes} onChange={(v) => update({ idType: v })} />
