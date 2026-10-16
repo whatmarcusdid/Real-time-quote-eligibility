@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "@fontsource/mulish/latin-600.css";
+@import "@fontsource/mulish/latin-700.css";
+@import "@fontsource/mulish/latin-800.css";
+@import "@fontsource/roboto/latin-400.css";
+
+/* Tokens: inspected via Figma get_variable_defs (see README for inferred values) */
+@theme {
+  --font-sans: "Mulish", system-ui, sans-serif;
+  --font-caption: "Roboto", system-ui, sans-serif;
+  --color-brand: #6000c5;          /* Primary/Purple 100 */
+  --color-brand-icon: #904dd6;     /* header icon tile (design context) */
+  --color-ink-primary: #4b4d52;    /* Dark / Primary */
+  --color-terminal: #e7ebee;       /* Terminal-BG */
+  --color-ink-90: rgba(0,0,0,0.9); /* dark-90-high-emp */
+  --color-ink-60: rgba(0,0,0,0.6); /* dark-60-medium-emp */
+  --color-ink-30: rgba(0,0,0,0.3); /* dark-30-low-emp */
+  --color-divider: rgba(0,0,0,0.12); /* dark-12-divider */
+  --color-success: #2e7d32;        /* inferred from screenshots */
+  --color-warning: #f0a800;        /* inferred from screenshots */
+  --color-warning-bg: #fff8e6;     /* inferred */
+}
+
+html, body { margin: 0; background: #fff; }
+body { font-family: var(--font-sans); color: var(--color-ink-90); min-width: 1440px; }
+:focus-visible { outline: 3px solid #6000c5; outline-offset: 2px; }
+.focus-invert:focus-visible { outline-color: #fff; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

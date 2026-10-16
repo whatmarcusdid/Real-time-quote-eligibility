@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons Component" clip-path="url(#clip0_0_719)">
+<g id="Vector">
+</g>
+<g id="Group">
+<path id="Vector_2" d="M14.998 16V18H7.66L4.99 20V18H1.99V9H7.99V7H1.99C0.887 7 -0.01 7.89 -0.01 9V18C-0.01 19.1 0.887 20 1.99 20H2.99V24L8.323 20H14.983C16.083 20 16.983 19.1 16.983 18V16H14.983H14.998Z" fill="black" fill-opacity="0.6"/>
+<path id="Vector_3" d="M16.99 14C13.13 14 9.99 10.86 9.99 7C9.99 3.14 13.13 0 16.99 0C20.85 0 23.99 3.141 23.99 7C23.99 10.86 20.85 14 16.99 14ZM16.99 2C14.23 2 11.99 4.24 11.99 7C11.99 9.75 14.23 12 16.99 12C19.74 12 21.99 9.75 21.99 7C21.99 4.24 19.74 2 16.99 2Z" fill="black" fill-opacity="0.6"/>
+<path id="Vector_4" d="M15.99 7H17.99V11H15.99V7Z" fill="black" fill-opacity="0.6"/>
+<path id="Vector_5" d="M16.99 4C16.7248 4 16.4704 4.10536 16.2829 4.29289C16.0954 4.48043 15.99 4.73478 15.99 5C15.99 5.26522 16.0954 5.51957 16.2829 5.70711C16.4704 5.89464 16.7248 6 16.99 6C17.2552 6 17.5096 5.89464 17.6971 5.70711C17.8846 5.51957 17.99 5.26522 17.99 5C17.99 4.73478 17.8846 4.48043 17.6971 4.29289C17.5096 4.10536 17.2552 4 16.99 4V4Z" fill="black" fill-opacity="0.6"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_719">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
