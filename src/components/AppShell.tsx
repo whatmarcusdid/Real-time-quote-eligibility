@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import type { CarrierId } from '../data/types'
-import { BrowserChrome, TerminalNav } from './Chrome'
+import { TerminalNav } from './Chrome'
 import { AppHeader } from './Header'
 import { LeftRail } from './LeftRail'
 import { CarrierRail } from './CarrierRail'
@@ -19,22 +19,22 @@ interface Props {
   children: ReactNode
 }
 
-/** Application-form layout: left rail | header + question card | carrier rail. Fixed 1440 desktop. */
+/** Application-form layout: left rail | header + question card | carrier rail. Fluid from 744px (min) upward. */
 export function AppShell({ step, totalSteps, title, activeCarrier, onPrev, onNext, nextDisabledReason, children }: Props) {
   return (
-    <div className="mx-auto w-[1440px]">
-      <BrowserChrome />
+    <div className="min-w-[744px] w-full">
+      <DemoBar />
       <TerminalNav />
       <div className="flex min-h-[845px]">
         <LeftRail current={step} total={totalSteps} />
-        <main className="relative flex w-[1060px] shrink-0 flex-col bg-terminal">
-          <AppHeader className="h-[178px]" />
-          <section aria-labelledby="qs-title" className="relative z-[1] mx-[140px] -mt-[47px] flex flex-col gap-[15px] rounded-lg border border-divider bg-white p-5 drop-shadow-[3px_0_2px_rgba(0,0,0,0.15)]">
+        <main className="relative flex min-w-0 flex-1 flex-col bg-terminal">
+          <AppHeader className="min-h-[178px] pb-[64px]" />
+          <section aria-labelledby="qs-title" className="relative z-[1] mx-5 -mt-[47px] w-auto max-w-[780px] lg:mx-10 min-[1100px]:mx-auto min-[1100px]:w-[calc(100%-80px)] flex flex-col gap-[15px] rounded-lg border border-divider bg-white p-5 drop-shadow-[3px_0_2px_rgba(0,0,0,0.15)]">
             <h2 id="qs-title" className="m-0 text-[20px] font-bold text-ink-90">{title}</h2>
             {children}
           </section>
           <div className="flex-1 min-h-[120px]" />
-          <div className="sticky bottom-0 flex justify-between px-5 pb-5">
+          <div className="pointer-events-none sticky bottom-0 z-20 flex justify-between px-5 pb-5 [&>*]:pointer-events-auto">
             {onPrev ? (
               <button type="button" onClick={onPrev} className="flex size-14 items-center justify-center rounded-full bg-brand">
                 <Img src="figma/IcArrowBack24Px1.svg" width={24} height={24} /><span className="sr-only">Previous</span>
@@ -51,11 +51,10 @@ export function AppShell({ step, totalSteps, title, activeCarrier, onPrev, onNex
               </button>
             </div>
           </div>
-          {nextDisabledReason && <p id="next-reason" role="status" className="absolute right-5 bottom-[84px] m-0 max-w-[260px] rounded bg-white px-2 py-1 text-right text-[12px] font-semibold text-ink-60 shadow">{nextDisabledReason}</p>}
+          {nextDisabledReason && <p id="next-reason" role="status" className="absolute right-5 bottom-[84px] z-20 m-0 max-w-[260px] rounded bg-white px-2 py-1 text-right text-[12px] font-semibold text-ink-60 shadow">{nextDisabledReason}</p>}
         </main>
         <CarrierRail activeCarrier={activeCarrier} />
       </div>
-      <DemoBar />
     </div>
   )
 }

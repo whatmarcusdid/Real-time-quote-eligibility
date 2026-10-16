@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "responsive": "node scripts/responsive.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",
