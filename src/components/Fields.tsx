@@ -1,7 +1,8 @@
 import { useId, type ReactNode } from 'react'
 import { Img } from './Icon'
 
-const box = 'flex h-[46px] items-center gap-3 rounded border border-ink-30 bg-white px-2 focus-within:border-2 focus-within:border-brand'
+const box = 'flex h-12 items-center gap-3 rounded border border-ink-30 bg-white px-2 focus-within:border-2 focus-within:border-brand'
+const control = 'w-full border-0 bg-transparent p-0 text-[14px] font-semibold text-ink-90 outline-none focus-visible:outline-none'
 
 export function TextField({ label, value, onChange, prefix, helper, trailing, inline = true, inputMode, error, placeholder }: {
   label: string; value: string; onChange: (v: string) => void; prefix?: string; helper?: string; trailing?: ReactNode
@@ -12,13 +13,13 @@ export function TextField({ label, value, onChange, prefix, helper, trailing, in
   return (
     <div className="flex w-full flex-col gap-1">
       {!inline && <label htmlFor={id} className="text-[14px] font-semibold text-ink-90">{label}</label>}
-      <div className={`${box} ${inline ? 'h-[38px] min-h-[38px] box-content py-0' : ''} ${error ? 'border-red-600' : ''}`}>
+      <div className={`${box} ${error ? 'border-red-600' : ''}`}>
         {prefix && <span aria-hidden className="pl-1 text-[16px] text-ink-60">{prefix}</span>}
         <div className="flex flex-1 flex-col">
           {inline && <label htmlFor={id} className="text-[10px] font-semibold text-ink-60">{label}</label>}
           <input id={id} value={value} placeholder={placeholder} inputMode={inputMode} onChange={(e) => onChange(e.target.value)}
             aria-describedby={helper || error ? hid : undefined} aria-invalid={!!error}
-            className="w-full border-0 bg-transparent p-0 text-[14px] font-semibold text-ink-90 outline-none" />
+            className={control} />
         </div>
         {trailing}
       </div>
@@ -34,11 +35,11 @@ export function SelectField({ label, value, options, onChange, inline = true, se
   return (
     <div className="flex w-full flex-col gap-1">
       {!inline && <label htmlFor={id} className="text-[14px] font-semibold text-ink-90">{label}</label>}
-      <div className={`${box} relative ${inline ? 'h-[38px] box-content' : ''}`}>
+      <div className={`${box} relative`}>
         {searchable && <Img src="figma/search.svg" width={24} height={24} />}
         <div className="flex flex-1 flex-col">
           {inline && <label htmlFor={id} className="text-[10px] font-semibold text-ink-60">{label}</label>}
-          <select id={id} value={value} onChange={(e) => onChange(e.target.value)} className="w-full appearance-none border-0 bg-transparent p-0 pr-8 text-[14px] font-semibold text-ink-90 outline-none">
+          <select id={id} value={value} onChange={(e) => onChange(e.target.value)} className={`${control} appearance-none pr-8`}>
             {placeholder !== undefined && <option value="">{placeholder}</option>}
             {options.map((o) => <option key={o}>{o}</option>)}
           </select>
@@ -54,10 +55,10 @@ export function Stepper({ label, value, onChange, min = 0 }: { label: string; va
   return (
     <div className="flex flex-col gap-3">
       <label htmlFor={id} className="text-[14px] font-semibold text-ink-90">{label}</label>
-      <div className="flex h-[46px] w-[167px] items-center justify-between rounded border border-ink-30 px-5 focus-within:border-2 focus-within:border-brand">
+      <div className="flex h-12 w-[167px] items-center justify-between rounded border border-ink-30 px-5 focus-within:border-2 focus-within:border-brand">
         <button type="button" aria-label={`Decrease ${label}`} onClick={() => onChange(Math.max(min, value - 1))} className="flex size-[15px] items-center justify-center rounded-full bg-brand text-[13px] font-bold leading-none text-white">−</button>
         <input id={id} type="number" min={min} value={value} onChange={(e) => onChange(Math.max(min, Number(e.target.value) || 0))}
-          className="w-12 border-0 bg-transparent text-center text-[14px] font-semibold text-ink-90 outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none" />
+          className="w-12 border-0 bg-transparent text-center text-[14px] font-semibold text-ink-90 outline-none focus-visible:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none" />
         <button type="button" aria-label={`Increase ${label}`} onClick={() => onChange(value + 1)} className="flex size-[15px] items-center justify-center rounded-full bg-brand text-[13px] font-bold leading-none text-white">+</button>
       </div>
     </div>

@@ -29,7 +29,7 @@ export function AppShell({ step, totalSteps, title, activeCarrier, onPrev, onNex
         <LeftRail current={step} total={totalSteps} />
         <main className="relative flex min-w-0 flex-1 flex-col bg-terminal">
           <AppHeader className="min-h-[178px] pb-[64px]" />
-          <section aria-labelledby="qs-title" className="relative z-[1] mx-5 -mt-[47px] w-auto max-w-[780px] lg:mx-10 min-[1100px]:mx-auto min-[1100px]:w-[calc(100%-80px)] flex flex-col gap-[15px] rounded-lg border border-divider bg-white p-5 drop-shadow-[3px_0_2px_rgba(0,0,0,0.15)]">
+          <section aria-labelledby="qs-title" className="relative z-[1] -mt-[47px] w-[min(780px,calc(100%-40px))] self-center flex flex-col gap-[15px] rounded-lg border border-divider bg-white p-5 drop-shadow-[3px_0_2px_rgba(0,0,0,0.15)]">
             <h2 id="qs-title" className="m-0 text-[20px] font-bold text-ink-90">{title}</h2>
             {children}
           </section>

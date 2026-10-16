@@ -121,10 +121,7 @@ export function CarrierRail({ activeCarrier }: { activeCarrier?: CarrierId }) {
         </div>
         <ul id="inelig" hidden={!open} className="m-0 flex list-none flex-col gap-3 p-0">
           {snap.ineligible.map((c) => (
-            <li key={c.id} className="flex h-[38px] items-center gap-3 rounded-md border border-divider bg-white px-1.5">
-              <Logo src={c.logo} name={c.name} size={26} />
-              <span className="text-[14px] font-bold text-ink-90">{c.name}</span>
-            </li>
+            <CarrierCard key={c.id} row={{ carrier: c, lines: [] }} active={false} showLines={false} />
           ))}
         </ul>
       </div>
