@@ -41,6 +41,7 @@ to clear them and return to Coverage type. You can also clear site data in the b
   always requires additional questions.
 - **Chubb and CNA** questions are reproduced from Figma. BiBERK, Hiscox, Liberty Mutual and Travelers use
   **templated placeholder questions**, labeled on screen.
+- The **Estimated Annual Premium** ranges ($739–$1,204 GL, $734–$1,343 WC) are the static values from the Chubb live frame; the panel appears once every eligible carrier has responded.
 - Browser tabs/address bar, Terminal nav, user menu, Intercom, left-rail collapse and help icon are **decorative**.
 
 ## Intentionally disabled (each shows its reason on hover/focus)

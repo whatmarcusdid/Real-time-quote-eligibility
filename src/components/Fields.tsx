@@ -35,7 +35,7 @@ export function SelectField({ label, value, options, onChange, inline = true, se
     <div className="flex w-full flex-col gap-1">
       {!inline && <label htmlFor={id} className="text-[14px] font-semibold text-ink-90">{label}</label>}
       <div className={`${box} relative ${inline ? 'h-[38px] box-content' : ''}`}>
-        {searchable && <span aria-hidden className="text-[16px] text-ink-90">⌕</span>}
+        {searchable && <Img src="figma/search.svg" width={24} height={24} />}
         <div className="flex flex-1 flex-col">
           {inline && <label htmlFor={id} className="text-[10px] font-semibold text-ink-60">{label}</label>}
           <select id={id} value={value} onChange={(e) => onChange(e.target.value)} className="w-full appearance-none border-0 bg-transparent p-0 pr-8 text-[14px] font-semibold text-ink-90 outline-none">
