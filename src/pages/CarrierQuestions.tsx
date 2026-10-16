@@ -58,7 +58,7 @@ export default function CarrierQuestions() {
       })}
       <Modal open={modalOpen} onClose={() => setModalOpen(false)} labelledBy="timeout-title">
         {timeoutLine && (
-          <div className="flex w-[377px] flex-col gap-4 p-5">
+          <div className="flex w-[min(377px,calc(100vw-48px))] flex-col gap-4 p-5">
             <UnderwrittenBy carrierId={carrierId} line={timeoutLine} headingId="timeout-title" />
             <TimeoutNotice />
             <div className="flex gap-6">

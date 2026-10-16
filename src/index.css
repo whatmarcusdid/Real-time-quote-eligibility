@@ -22,7 +22,7 @@
 }
 
 html, body { margin: 0; background: #fff; }
-body { font-family: var(--font-sans); color: var(--color-ink-90); min-width: 1440px; }
+body { font-family: var(--font-sans); color: var(--color-ink-90); min-width: 744px; }
 :focus-visible { outline: 3px solid #6000c5; outline-offset: 2px; }
 .focus-invert:focus-visible { outline-color: #fff; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

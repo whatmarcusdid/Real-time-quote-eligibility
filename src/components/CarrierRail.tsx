@@ -99,7 +99,7 @@ export function CarrierRail({ activeCarrier }: { activeCarrier?: CarrierId }) {
   }, [answers, activeCarrier])
 
   return (
-    <aside aria-label="Carrier eligibility (simulated, real-time)" aria-busy={updating} className="w-[324px] shrink-0 bg-white px-3 pb-6 pt-1">
+    <aside aria-label="Carrier eligibility (simulated, real-time)" aria-busy={updating} className="w-[260px] shrink-0 bg-white xl:w-[324px] px-3 pb-6 pt-1">
       <p aria-live="polite" className={`m-0 h-5 text-[11px] font-semibold text-brand ${updating ? '' : 'invisible'}`}>
         {updating ? 'Checking eligibility… (simulated)' : ''}
       </p>

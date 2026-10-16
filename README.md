@@ -2,7 +2,7 @@
 
 A portfolio prototype of an agent quoting flow (Bold Penguin Terminal style) built from the Figma section
 *Real-time quote eligibility* (`iYVhK3s7jLWceLr62T05iO`, node `2006:57654`). It's a **scripted, predetermined guided
-flow** for the fictional business **Union Square Flowers**. Desktop only, designed at **1440px** wide.
+flow** for the fictional business **Union Square Flowers**. Desktop-style layout, fluid from a **744px** minimum width up through 1440px and wider (below 744px the page scrolls horizontally). Run `npm run responsive [baseUrl]` for overflow/layout checks and screenshots at 744–1920px.
 
 ## Run
 ```bash
