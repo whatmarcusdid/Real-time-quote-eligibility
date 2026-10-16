@@ -14,7 +14,7 @@ npm run lint           # ESLint
 npm run typecheck      # tsc -b
 npx playwright install chromium && npm run preview & node scripts/verify.mjs   # headless walkthrough
 ```
-Deploy under a sub-path (e.g. GitHub Pages): `BASE_PATH=/Real-time-quote-eligibility/ npm run build`.
+Deployed on Vercel at the root (`vercel.json` adds SPA rewrites). For a sub-path host (e.g. GitHub Pages): `BASE_PATH=/Real-time-quote-eligibility/ npm run build`.
 
 ## Reset the demo
 Answers are saved in `localStorage` (`rtqe-demo-v1`). Click **Reset demo** in the dark pill at the top of the page
@@ -54,4 +54,4 @@ emphasis opacities (90/60/30/12%) are inferred from the design-context code and 
 
 ## Structure
 `src/data` typed mock data · `src/services` simulated service layer · `src/state` demo store (localStorage) ·
-`src/components` shell and UI · `src/pages` one file per route · `public/figma`, `public/logos` assets exported from Figma.
+`src/components` shell and UI · `src/pages` one file per route · `src/assets/figma`, `src/assets/logos` assets exported from Figma (inlined into the bundle).

@@ -7,4 +7,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: process.env.BASE_PATH ?? '/',
   plugins: [react(), tailwindcss()],
+  // Inline images and fonts so the static build is a handful of files.
+  build: { assetsInlineLimit: 1024 * 1024 },
 })

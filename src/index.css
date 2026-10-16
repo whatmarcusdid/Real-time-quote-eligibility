@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@import "@fontsource/mulish/600.css";
-@import "@fontsource/mulish/700.css";
-@import "@fontsource/mulish/800.css";
-@import "@fontsource/roboto/400.css";
+@import "@fontsource/mulish/latin-600.css";
+@import "@fontsource/mulish/latin-700.css";
+@import "@fontsource/mulish/latin-800.css";
+@import "@fontsource/roboto/latin-400.css";
 
 /* Tokens: inspected via Figma get_variable_defs (see README for inferred values) */
 @theme {
